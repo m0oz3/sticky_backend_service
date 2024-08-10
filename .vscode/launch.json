@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run Django",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "debug.py",
+            "justMyCode": false,
+            "env": {
+                "DJANGO_SETTINGS_MODULE": "config.settings.local"
+            }
+        }
+    ]
+}
