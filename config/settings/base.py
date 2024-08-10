@@ -60,6 +60,7 @@ WSGI_APPLICATION = "config.wsgi.application"
 # APPS
 # ------------------------------------------------------------------------------
 DJANGO_APPS = [
+    "daphne",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
@@ -86,6 +87,7 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     "sticky_backend_service.users",
+    "sticky_backend_service.game",
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
