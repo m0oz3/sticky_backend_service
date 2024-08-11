@@ -14,7 +14,7 @@ SECRET_KEY = env(
     default="SqSoDcJb3nMYWDOWP96IOSMR8ityguLB9dLOYCXdcI7IDTxBxFWPdl3K7pg2bUl3",
 )
 # https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = ["localhost", "0.0.0.0", "127.0.0.1"]  # noqa: S104
+ALLOWED_HOSTS = ["localhost", "0.0.0.0", "127.0.0.1", "192.168.43.188"]  # noqa: S104
 
 # CACHES
 # ------------------------------------------------------------------------------
@@ -75,3 +75,11 @@ CELERY_TASK_EAGER_PROPAGATES = True
 # Your stuff...
 # ------------------------------------------------------------------------------
 ACCOUNT_EMAIL_VERIFICATION = "none"
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels_redis.core.RedisChannelLayer",
+        "CONFIG": {
+            "hosts": [("redis", 6379)],
+        },
+    },
+}
