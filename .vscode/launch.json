@@ -10,6 +10,42 @@
             "env": {
                 "DJANGO_SETTINGS_MODULE": "config.settings.local"
             }
+        },
+        {
+            "name": "Python: Celery",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "celery",
+            "console": "integratedTerminal",
+            "args": [
+                "-A",
+                "config.celery_app",
+                "worker",
+                "-l",
+                "INFO",
+                "-P",
+                "solo"
+            ],
+            "env": {
+                "DJANGO_SETTINGS_MODULE": "config.settings.local"
+            }
+        },
+        {
+            "name": "Python: Celery Beat",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "celery",
+            "console": "integratedTerminal",
+            "args": [
+                "-A",
+                "config.celery_app",
+                "beat",
+                "-l",
+                "INFO"
+            ],
+            "env": {
+                "DJANGO_SETTINGS_MODULE": "config.settings.local"
+            }
         }
     ]
 }
